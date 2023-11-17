@@ -30,5 +30,9 @@ public class Book {
 
     private int yearPublished;
 
+    public Book(String title) {
+        this.title = title;
+    }
+
 
 }
