@@ -17,5 +17,4 @@ public interface BookService {
 
     List<Book> findByGenreContains(String genre);
 
-
 }

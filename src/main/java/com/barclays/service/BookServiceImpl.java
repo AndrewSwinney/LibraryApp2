@@ -2,6 +2,7 @@ package com.barclays.service;
 
 import com.barclays.model.Book;
 import com.barclays.model.Member;
+import com.barclays.model.Movie;
 import com.barclays.repository.BookRepository;
 import com.barclays.repository.MemberRepository;
 import lombok.AllArgsConstructor;
