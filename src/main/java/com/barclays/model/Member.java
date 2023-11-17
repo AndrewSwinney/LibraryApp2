@@ -21,8 +21,11 @@ public class Member {
     @GeneratedValue
 
     private int id;
-
     private String name;
 
     private String emailAddress;
+
+    public Member(String name) {
+        this.name = name;
+    }
 }
