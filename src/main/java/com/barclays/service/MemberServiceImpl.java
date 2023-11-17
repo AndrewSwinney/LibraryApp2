@@ -1,6 +1,5 @@
 package com.barclays.service;
 
-
 import com.barclays.model.Member;
 import com.barclays.repository.MemberRepository;
 import lombok.AllArgsConstructor;
@@ -18,11 +17,11 @@ import java.util.Optional;
 public class MemberServiceImpl implements MemberService {
 
     private MemberRepository memberRepository;
+
     @Override
     public List<Member> findAll() {
         List<Member> members = new ArrayList<>();
-        Iterable<Member> memberIts = memberRepository.findAll();
-        memberIts.forEach(members::add);
+        memberRepository.findAll().forEach(members::add);
         return members;
     }
 
