@@ -1,6 +1,5 @@
 package com.barclays.controller;
 
-import com.barclays.model.Member;
 import com.barclays.model.Movie;
 import com.barclays.service.MovieService;
 import io.micrometer.common.util.StringUtils;

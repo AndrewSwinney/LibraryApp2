@@ -2,6 +2,7 @@ package com.barclays.service;
 
 import com.barclays.model.Book;
 import com.barclays.model.Member;
+import com.barclays.model.Movie;
 import com.barclays.repository.BookRepository;
 import com.barclays.repository.MemberRepository;
 import lombok.AllArgsConstructor;
@@ -38,5 +39,11 @@ public class BookServiceImpl implements BookService {
     public List<Book> findByTitleContains(String filter) {
         return bookRepository.findByTitleContains(filter);
     }
+
+    @Override
+    public List<Book> findByGenreContains(String genre) {
+        return bookRepository.findByGenreContains(genre);
+    }
+
 }
 

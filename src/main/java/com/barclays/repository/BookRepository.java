@@ -9,4 +9,6 @@ import java.util.List;
 public interface BookRepository extends CrudRepository<Book, Integer> {
 
     List<Book> findByTitleContains(String filter);
+
+    List<Book> findByGenreContains(String genre);
 }
