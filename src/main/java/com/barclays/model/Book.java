@@ -30,6 +30,8 @@ public class Book {
 
     private String author;
 
+    private String genre;
+
     private int yearPublished;
 
     public Book(String title) {

@@ -25,6 +25,7 @@ public class BookController {
     }
 
     @GetMapping("/books")
+
     public List<Book> getAllBooks(@PathParam("filter") String filter,
                                   @PathParam ("author") String author,
                                   @PathParam("genre") String genre) {
@@ -37,6 +38,8 @@ public class BookController {
         else if (StringUtils.isNotBlank(author)) {
             books = bookService.findByAuthorContains(author);
         }
+
+
         else if (StringUtils.isNotBlank(genre)) {
             books = bookService.findByGenreContains(genre);
         }
