@@ -24,6 +24,8 @@ public class Book {
 
     private int isbn;
 
+    private String genre;
+
     private String title;
 
     private String author;
