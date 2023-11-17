@@ -25,12 +25,20 @@ public class BookController {
     }
 
     @GetMapping("/books")
-    public List<Book> getAllBooks(@PathParam("filter") String filter) {
+    public List<Book> getAllBooks(@PathParam("filter") String filter,
+                                  @PathParam ("author") String author,
+                                  @PathParam("genre") String genre) {
         log.debug("In the getAll Books method");
         List<Book> books = Collections.emptyList();
         if(StringUtils.isNotBlank(filter)) {
             log.debug("In the getAll Books method: " + filter);
             books = bookService.findByTitleContains(filter);
+        }
+        else if (StringUtils.isNotBlank(author)) {
+            books = bookService.findByAuthorContains(author);
+        }
+        else if (StringUtils.isNotBlank(genre)) {
+            books = bookService.findByGenreContains(genre);
         }
         else {
             books = bookService.findAllBooks();

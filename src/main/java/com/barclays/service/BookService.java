@@ -12,4 +12,10 @@ public interface BookService {
     Book findByBookId(int id);
 
     List<Book> findByTitleContains(String filter);
+
+    List<Book> findByAuthorContains(String author);
+
+    List<Book> findByGenreContains(String genre);
+
+
 }
